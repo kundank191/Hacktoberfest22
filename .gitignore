@@ -1,0 +1,4 @@
+# calendar optimization
+calendar_optimization/files/*
+
+!calendar_optimization/files/.gitkeep
