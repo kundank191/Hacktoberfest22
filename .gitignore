@@ -1,0 +1,5 @@
+# calendar optimization
+calendar_optimization/files/*
+calendar_optimization/__pycache__/*
+
+!calendar_optimization/files/.gitkeep
