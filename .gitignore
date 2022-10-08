@@ -3,3 +3,10 @@ calendar_optimization/files/*
 calendar_optimization/__pycache__/*
 
 !calendar_optimization/files/.gitkeep
+
+
+# Sending Message to telegram
+
+send_message_in_telegram/secret/*
+
+!send_message_in_telegram/secret/.gitkeep
