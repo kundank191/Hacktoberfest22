@@ -13,18 +13,19 @@ def add_alarm_to_calender_events(filepath, num_day_before_notif = 0, num_hour_be
 
     # Alarm Schema
     alarm_schema = f"""
-    BEGIN:VALARM
-    ACTION:DISPLAY
-    DESCRIPTION:This is an event reminder
-    TRIGGER:-P{num_day_before_notif}DT{num_hour_before_notif}H{num_min_before_notif}M{num_sec_before_notif}S
-    END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P{num_day_before_notif}DT{num_hour_before_notif}H{num_min_before_notif}M{num_sec_before_notif}S
+END:VALARM
+END:VEVENT
     """
 
     to_replace = """END:VEVENT"""
 
     data = Path(filepath).read_text()
 
-    updated_file = data.replace(to_replace, alarm_schema + to_replace)
+    updated_file = data.replace(to_replace, alarm_schema)
 
     Path(filepath).write_text(updated_file)
 
